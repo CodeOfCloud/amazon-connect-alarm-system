@@ -1,0 +1,33 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:ListContributorInsights",
+                "dynamodb:DescribeReservedCapacityOfferings",
+                "dynamodb:ListGlobalTables",
+                "dynamodb:ListTables",
+                "dynamodb:DescribeReservedCapacity",
+                "dynamodb:ListBackups",
+                "dynamodb:PurchaseReservedCapacityOfferings",
+                "dynamodb:ListImports",
+                "dynamodb:DescribeLimits",
+                "dynamodb:DescribeEndpoints",
+                "dynamodb:ListExports",
+                "dynamodb:ListStreams"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "dynamodb:*",
+            "Resource": [
+                "arn:aws:dynamodb:ap-southeast-1:<account-id>:table/connect-contact-info",
+                "arn:aws:dynamodb:ap-southeast-1:<account-id>:table/connect-event-info"
+            ]
+        }
+    ]
+}
